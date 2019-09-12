@@ -11,7 +11,7 @@ export default class Profile extends React.Component {
   }
   render() {
     return (
-      <Layout>
+      <Layout title="Profile">
         <pre>{JSON.stringify(this.state.user, null, 2)}</pre>
       </Layout>
     );
