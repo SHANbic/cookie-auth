@@ -30,33 +30,33 @@ const Layout = ({ children, title, auth }) => {
       <h1>{title}</h1>
       {children}
 
-      <style jsx>{`
-        .root {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          flex-direction: column;
-        }
-
-        .navbar {
-          width: 100%;
-          display: flex;
-          justify-content: space-around;
-        }
-
-        a {
-          margin-left: 0.5rem;
-        }
-
-        button {
-          text-decoration: underline;
-          padding: 0;
-          font: inherit;
-          cursor: pointer;
-          border-style: none;
-          color: rgb(0, 0, 238);
-        }
-      `}</style>
+      <style jsx>
+        {`
+          .root {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+          .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+          }
+          a {
+            margin-right: 0.5em;
+          }
+          button {
+            text-decoration: underline;
+            padding: 0;
+            font: inherit;
+            cursor: pointer;
+            border-style: none;
+            background-color: white;
+            color: rgb(0, 0, 238);
+          }
+        `}
+      </style>
     </div>
   );
 };
