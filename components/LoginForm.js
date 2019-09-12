@@ -2,8 +2,8 @@ import { loginUser } from '../lib/auth';
 
 class LoginForm extends React.Component {
   state = {
-    email: '',
-    password: ''
+    email: 'Sincere@april.biz',
+    password: 'hildegard.org'
   };
 
   handleChange = event => {
@@ -26,6 +26,7 @@ class LoginForm extends React.Component {
             type="email"
             name="email"
             placeholder="email"
+            value={this.state.email}
             onChange={this.handleChange}
           />
         </div>
@@ -34,6 +35,7 @@ class LoginForm extends React.Component {
             type="password"
             name="password"
             placeholder="password"
+            value={this.state.password}
             onChange={this.handleChange}
           />
         </div>
