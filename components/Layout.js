@@ -1,22 +1,30 @@
 import Link from 'next/link';
 
-const Layout = ({ children, title }) => {
+const Layout = ({ children, title, auth }) => {
+  const { user = {} } = auth || {};
   return (
     <div className="root">
       <nav className="navbar">
         <span>
-          Welcome <strong>Guest</strong>
+          Welcome <strong>{user.name || 'Guest'}</strong>
         </span>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-        <Link href="/profile">
-          <a>Profile</a>
-        </Link>
-        <button>Logout</button>
-        <Link href="/login">
-          <a>Login</a>
-        </Link>
+        <div>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
+          {user.email ? (
+            <React.Fragment>
+              <Link href="/profile">
+                <a>Profile</a>
+              </Link>
+              <button>Logout</button>
+            </React.Fragment>
+          ) : (
+            <Link href="/login">
+              <a>Login</a>
+            </Link>
+          )}
+        </div>
       </nav>
       <h1>{title}</h1>
       {children}

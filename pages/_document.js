@@ -14,7 +14,7 @@ export default class MyDocument extends Document {
         <Head />
         <body>
           <Main />
-          <script dangerouslySetInnerHTML={{ __html: getUserScript() }} />
+          <script dangerouslySetInnerHTML={{ __html: getUserScript(user) }} />
           <NextScript />
         </body>
       </html>
